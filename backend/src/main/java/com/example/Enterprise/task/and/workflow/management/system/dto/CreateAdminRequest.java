@@ -3,9 +3,18 @@ package com.example.Enterprise.task.and.workflow.management.system.dto;
 public class CreateAdminRequest {
     private String email;
     private String password;
-
+    private String name;
     public String getEmail() {
         return email;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getName() {
+        return name;
     }
 
     public void setEmail(String email) {

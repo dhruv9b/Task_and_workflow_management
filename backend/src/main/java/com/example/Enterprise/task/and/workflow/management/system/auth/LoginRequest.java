@@ -3,6 +3,13 @@ package com.example.Enterprise.task.and.workflow.management.system.auth;
 public class LoginRequest {
     private String email;
     private String password;
+    private String name;
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
     public String getEmail() {
         return email;
     }

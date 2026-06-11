@@ -41,6 +41,7 @@ public class AdminService {
         admin.setPassword(
                 passwordEncoder.encode(request.getPassword())
         );
+        admin.setName(request.getName());
         admin.setRole(Role.ADMIN);
         admin.setActive(true);
         admin.setDeleted(false);
@@ -63,6 +64,7 @@ public class AdminService {
         manager.setPassword(
                 passwordEncoder.encode(request.getPassword())
         );
+        manager.setName(request.getName());
         manager.setRole(Role.MANAGER);
         manager.setActive(true);
         manager.setDeleted(false);
@@ -83,6 +85,7 @@ public class AdminService {
         employee.setPassword(
                 passwordEncoder.encode(request.getPassword())
         );
+        employee.setName(request.getName());
         employee.setRole(Role.EMPLOYEE);
         employee.setActive(true);
         employee.setDeleted(false);

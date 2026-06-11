@@ -62,7 +62,7 @@ export default function CreateUserModal({ role, onClose, onSuccess }) {
           {/* Name */}
           <div>
             <label className="mb-1 block text-sm text-gray-400">
-              Full Name <span className="text-gray-600">(Optional)</span>
+              Full Name
             </label>
             <input
               type="text"
