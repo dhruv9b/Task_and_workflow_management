@@ -13,16 +13,15 @@ public class DotenvConfig {
         try {
             Dotenv dotenv = Dotenv.configure()
                     .directory("./")
+                    .ignoreIfMissing()
                     .load();
-            
-            // Set system properties for each environment variable
-            dotenv.entries().forEach(entry -> {
-                System.setProperty(entry.getKey(), entry.getValue());
-            });
-        } catch (Exception e) {
-            System.err.println("Error loading .env file: " + e.getMessage());
-            System.err.println("Make sure .env file exists in the backend directory with all required variables.");
-            throw new RuntimeException("Failed to load .env file. Please create it from .env.example", e);
+
+            dotenv.entries().forEach(entry ->
+                    System.setProperty(entry.getKey(), entry.getValue())
+            );
+
+        } catch (Exception ignored) {
+            // Railway environment variables will be used
         }
     }
 }
